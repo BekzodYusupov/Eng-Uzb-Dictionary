@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.screens.WordActivity">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="?actionBarSize"
+        android:layout_height="?actionBarSize"
+        android:background="?selectableItemBackground"
+        android:elevation="10dp"
+        android:paddingVertical="10dp"
+        android:paddingStart="8dp"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="?actionBarSize"
+        android:layout_height="?actionBarSize"
+        android:elevation="10dp"
+        android:paddingVertical="10dp"
+        android:paddingStart="8dp"
+        android:src="@drawable/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:text="Translation"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@+id/btnBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/wordInWordScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/red"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        tools:text="apple" />
+
+    <TextView
+        android:id="@+id/tvTranscriptWordScreen"
+        android:layout_width="0dp"
+        android:maxLines="1"
+        android:layout_marginEnd="8dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/wordInWordScreen"
+        app:layout_constraintEnd_toStartOf="@+id/tvTypeWordScreen"
+        app:layout_constraintStart_toEndOf="@id/wordInWordScreen"
+        tools:text="/ep.l/" />
+
+
+    <TextView
+        android:id="@+id/tvTypeWordScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center"
+        android:layout_marginEnd="16dp"
+        android:elevation="50dp"
+        android:text="noun"
+        android:textColor="#38A83C"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tvTranscriptWordScreen"
+        app:layout_constraintEnd_toStartOf="@id/tvCountWordScreen" />
+
+    <TextView
+        android:id="@+id/tvCountWordScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="[C or U]"
+        android:textColor="#38A83C"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tvTypeWordScreen"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivAudioWordScreenBritish"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:src="@drawable/volume_up"
+        app:layout_constraintStart_toStartOf="@id/wordInWordScreen"
+        app:layout_constraintTop_toBottomOf="@id/wordInWordScreen" />
+
+    <ImageView
+        android:id="@+id/ivAudioWordScreenUS"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:clickable="true"
+        android:src="@drawable/volume_up_us"
+        app:layout_constraintBottom_toBottomOf="@+id/ivAudioWordScreenBritish"
+        app:layout_constraintStart_toEndOf="@+id/ivAudioWordScreenBritish" />
+
+    <ImageView
+        android:id="@+id/ivfavStateWordScreen"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:src="@drawable/star_filled"
+        app:layout_constraintEnd_toEndOf="@id/tvCountWordScreen"
+        app:layout_constraintTop_toBottomOf="@id/tvCountWordScreen" />
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivAudioWordScreenBritish" />
+
+    <TextView
+        android:id="@+id/translationInWordScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="#000"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="@id/ivAudioWordScreenBritish"
+        app:layout_constraintTop_toBottomOf="@id/viewLine"
+        tools:text="Olma" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

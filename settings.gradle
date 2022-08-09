@@ -1,0 +1,27 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/shiburagi/Drawer-Behavior") // Github Package
+            credentials {
+                username = "shiburagi"
+                password = "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"
+            }
+        }
+    }
+}
+
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Dictionary App"
+include ':app'
